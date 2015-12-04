@@ -65,13 +65,7 @@ for inx_folder, folder in OutlookObj(mapi.Folders).items():
                             # In my case I used body and subject
                             log.info('({}) {}'.format(i, message.Subject.encode(
                                 'utf-8')))
-                            # print message.Body
-                            # , message.Sender, message.Body
-                            # Using move you can move e-mails around programatically,
-                            # make sure to pass it a MAPIFolder object as the
-                            # destination, use findFolder() to get the object
-                            # xx.Move(subfolder)
-
+                            
                             # get all emails from message's body
                             email = re.findall(email_regex, message.Body,
                                                re.MULTILINE)
